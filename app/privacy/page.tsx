@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Infodra AI',
@@ -354,6 +355,7 @@ export default function PrivacyPolicy() {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

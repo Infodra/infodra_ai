@@ -1,6 +1,6 @@
 'use client'
 
-import { Brain, Code, Ruler, Users } from 'lucide-react'
+import { Brain, Code, Users } from 'lucide-react'
 
 export function TalentSolutions() {
   const services = [
@@ -17,13 +17,6 @@ export function TalentSolutions() {
       description: 'Dedicated full-stack development teams building scalable web platforms, SaaS products, and enterprise applications.',
       gradient: 'from-purple-500 to-pink-500',
       bgColor: 'bg-purple-100 dark:bg-purple-950/30',
-    },
-    {
-      icon: Ruler,
-      name: 'CAD & Engineering Services',
-      description: 'Mechanical design engineers and CAD professionals supporting automotive, manufacturing, and industrial engineering projects.',
-      gradient: 'from-indigo-500 to-purple-500',
-      bgColor: 'bg-indigo-100 dark:bg-indigo-950/30',
     },
     {
       icon: Users,

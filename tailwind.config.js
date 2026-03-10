@@ -45,6 +45,7 @@ module.exports = {
         'fade-in': 'fadeIn 0.6s ease-in-out',
         'slide-up': 'slideUp 0.6s ease-out',
         'float': 'float 6s ease-in-out infinite',
+        'subtle-pulse': 'subtlePulse 8s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -58,6 +59,10 @@ module.exports = {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        subtlePulse: {
+          '0%, 100%': { opacity: '0.1' },
+          '50%': { opacity: '0.15' },
         },
       },
     },

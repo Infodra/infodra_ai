@@ -1,18 +1,35 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTheme } from 'next-themes'
-import { Moon, Sun, Menu, X } from 'lucide-react'
+import { Moon, Sun, Menu, X, ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { products } from '@/data/products'
 
 export function Navbar() {
   const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const [isProductsOpen, setIsProductsOpen] = useState(false)
+  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false)
   const { theme, setTheme } = useTheme()
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsProductsOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
   }, [])
 
   return (
@@ -50,18 +67,70 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#talent" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-              Services
+            <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
+              Home
             </Link>
-            <Link href="#technology" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-              Technology
+            
+            {/* Products Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  setIsProductsOpen(!isProductsOpen)
+                }}
+                className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer"
+                aria-expanded={isProductsOpen}
+                aria-haspopup="true"
+              >
+                <span>Products</span>
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isProductsOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 py-2 z-[100] pointer-events-auto"
+                  role="menu"
+                  aria-label="Products menu"
+                >
+                  <Link
+                    href="/products"
+                    className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    onClick={() => setIsProductsOpen(false)}
+                  >
+                    <div className="font-semibold">All Products</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">View our complete product catalog</div>
+                  </Link>
+                  <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
+                  {products && products.length > 0 ? (
+                    products.map((product) => (
+                      <Link
+                        key={product.slug}
+                        href={`/products/${product.slug}`}
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsProductsOpen(false)}
+                      >
+                        <div className="flex items-center space-x-2">
+                          <span className="text-xl">{product.icon}</span>
+                          <span className="font-medium">{product.title}</span>
+                        </div>
+                      </Link>
+                    ))
+                  ) : (
+                    <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">No products available</div>
+                  )}
+                </div>
+              )}
+            </div>
+
+            <Link href="/talent" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
+              Talent
             </Link>
-            <Link href="#industries" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-              Industries
+            <Link href="/solutions" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
+              Solutions
             </Link>
-            <Link href="#products" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-              Products
-            </Link>
+
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700"
@@ -69,14 +138,12 @@ export function Navbar() {
             >
               {mounted && (theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />)}
             </button>
-            <a
-              href="https://infodratechnologies.com/contact"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="px-6 py-2 bg-gradient-ai text-white rounded-lg hover:opacity-90 transition-opacity"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -103,42 +170,83 @@ export function Navbar() {
         <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
           <div className="px-4 py-4 space-y-3">
             <Link
-              href="#talent"
+              href="/"
               className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
-              Services
+              Home
+            </Link>
+            
+            {/* Products Expandable */}
+            <div>
+              <button
+                type="button"
+                onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
+                className="w-full flex items-center justify-between px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                aria-expanded={isMobileProductsOpen}
+              >
+                <span>Products</span>
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isMobileProductsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isMobileProductsOpen && (
+                <div className="pl-4 mt-2 space-y-2">
+                  <Link
+                    href="/products"
+                    className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                    onClick={() => {
+                      setIsOpen(false)
+                      setIsMobileProductsOpen(false)
+                    }}
+                  >
+                    All Products
+                  </Link>
+                  {products && products.length > 0 ? (
+                    products.map((product) => (
+                      <Link
+                        key={product.slug}
+                        href={`/products/${product.slug}`}
+                        className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                        onClick={() => {
+                          setIsOpen(false)
+                          setIsMobileProductsOpen(false)
+                        }}
+                      >
+                        <div className="flex items-center space-x-2">
+                          <span>{product.icon}</span>
+                          <span>{product.title}</span>
+                        </div>
+                      </Link>
+                    ))
+                  ) : (
+                    <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">No products available</div>
+                  )}
+                </div>
+              )}
+            </div>
+            
+            <Link
+              href="/talent"
+              className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+              onClick={() => setIsOpen(false)}
+            >
+              Talent
             </Link>
             <Link
-              href="#technology"
+              href="/solutions"
               className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
-              Technology
+              Solutions
             </Link>
+            
             <Link
-              href="#industries"
-              className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
-              onClick={() => setIsOpen(false)}
-            >
-              Industries
-            </Link>
-            <Link
-              href="#products"
-              className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
-              onClick={() => setIsOpen(false)}
-            >
-              Products
-            </Link>
-            <a
-              href="https://infodratechnologies.com/contact"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contact"
               className="block px-4 py-2 bg-gradient-ai text-white rounded-lg text-center"
               onClick={() => setIsOpen(false)}
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       )}

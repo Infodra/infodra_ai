@@ -1,6 +1,6 @@
 'use client'
 
-import { Brain, Code, Cloud, Database, Pencil, Briefcase } from 'lucide-react'
+import { Brain, Code, Cloud, Database, Briefcase } from 'lucide-react'
 
 export function EngineeringTalentSection() {
   const capabilities = [
@@ -49,17 +49,6 @@ export function EngineeringTalentSection() {
         'Analytics Engineers'
       ],
       gradient: 'from-emerald-500 to-teal-500',
-    },
-    {
-      icon: Pencil,
-      title: 'Mechanical & CAD Engineering',
-      roles: [
-        'CAD Design Engineers',
-        'CAE Analysts',
-        'Product Design Engineers',
-        'Automotive Engineers'
-      ],
-      gradient: 'from-orange-500 to-red-500',
     },
     {
       icon: Briefcase,
