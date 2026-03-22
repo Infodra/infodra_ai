@@ -52,9 +52,9 @@ export function Hero({
       {/* Content */}
       <div className={`relative max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 ${heroImage ? '' : 'text-center'}`}>
         <div className={`animate-fade-in ${heroImage ? 'flex flex-col lg:flex-row items-center gap-10' : ''}`}>
-          <div className={heroImage ? 'lg:w-1/2 text-center lg:text-left' : ''}>
+          <div className={heroImage ? 'lg:w-1/2 text-center' : ''}>
             {/* Title */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-[1.4]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               <span className="block bg-gradient-to-r from-gray-900 via-primary-800 to-accent-800 dark:from-white dark:via-primary-300 dark:to-accent-300 bg-clip-text text-transparent pb-2">
                 {title}
               </span>
@@ -66,7 +66,7 @@ export function Hero({
             </p>
 
             {/* CTA Buttons */}
-            <div className={`flex flex-col sm:flex-row items-center gap-4 mb-6 ${heroImage ? 'lg:justify-start justify-center' : 'justify-center'}`}>
+            <div className={`flex flex-col sm:flex-row items-center gap-4 mb-6 justify-center`}>
               <a
                 href={primaryCTA.href}
                 target={primaryCTA.href.startsWith('http') ? '_blank' : undefined}
