@@ -103,6 +103,15 @@ export default async function ProductPage({
     orb3: 'bg-cyan-400 dark:bg-cyan-800'
   };
 
+  // Hero images for specific products
+  const heroImages: Record<string, string> = {
+    'ai-video-translator': '/ai-video-translator-hero.png',
+    'ai-user-manual-generation': '/ai-user-manual-hero.png',
+    'ai-document-translator': '/ai-document-translator-hero.png',
+    'ai-voice-generation-studio': '/ai-voice-generation-hero.png',
+    'ai-prediction-ml-platforms': '/ai-prediction-hero.png',
+  };
+
   return (
     <main>
       {/* Hero Section */}
@@ -118,6 +127,7 @@ export default async function ProductPage({
           href: product.secondaryCTA.url || "#",
         }}
         colorScheme={colorScheme}
+        heroImage={heroImages[slug]}
       />
 
       {/* Features Section with Descriptions */}

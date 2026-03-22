@@ -13,14 +13,15 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-3">
-              <Image 
-                src="/infodra-logo.png" 
-                alt="Infodra AI Logo" 
-                width={120} 
-                height={40}
-                className="h-10 w-auto"
-              />
-              <span className="text-2xl font-bold text-white">Infodra AI</span>
+              <a href="https://www.infodratechnologies.com" target="_blank" rel="noopener noreferrer">
+                <Image 
+                  src="/CompanyNameLogo.png" 
+                  alt="Infodra AI Logo" 
+                  width={200} 
+                  height={50}
+                  className="h-12 w-auto"
+                />
+              </a>
             </div>
             <p className="text-gray-400 mb-4 max-w-md leading-relaxed">
               Infodra AI Platform - A technology ecosystem by Infodra Technologies Pvt Ltd. 

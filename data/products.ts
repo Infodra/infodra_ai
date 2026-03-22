@@ -40,6 +40,7 @@ export interface Product {
   tagline: string;
   shortDescription: string;
   icon: string;
+  externalUrl?: string;
   serviceModes?: ServiceMode[];
   features: Feature[];
   useCases: UseCase[];
@@ -344,6 +345,7 @@ export const products: Product[] = [
   {
     slug: "bizlead-database",
     title: "BiZlead Database",
+    externalUrl: "https://www.bizlead.infodra.ai/home",
     tagline: "Access India's Most Comprehensive B2B Business Database",
     shortDescription:
       "Discover verified business leads, company information, and contact details for decision makers.",
@@ -664,6 +666,7 @@ export const products: Product[] = [
   {
     slug: "stafftrack",
     title: "StaffTrack",
+    externalUrl: "https://www.stafftrack.infodra.ai/",
     tagline: "Smart GPS Attendance & Workforce Tracking",
     shortDescription:
       "Track employee attendance automatically using location-based geofencing. Monitor workforce presence, verify work locations, and generate real-time attendance reports through a secure browser-based platform.",

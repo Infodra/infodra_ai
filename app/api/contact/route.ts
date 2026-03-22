@@ -16,8 +16,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Connect to MongoDB
-    const client = new MongoClient(uri);
+    // Connect to MongoDB with timeout
+    const client = new MongoClient(uri, {
+      serverSelectionTimeoutMS: 10000,
+      connectTimeoutMS: 10000,
+    });
     await client.connect();
 
     const database = client.db('Infodra_db');
@@ -50,7 +53,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('MongoDB Error:', error);
     return NextResponse.json(
-      { error: 'Failed to submit contact form' },
+      { error: 'Failed to submit contact form. Please email us at connect@infodra.ai' },
       { status: 500 }
     );
   }

@@ -104,19 +104,35 @@ export function Navbar() {
                   </Link>
                   <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
                   {products && products.length > 0 ? (
-                    products.map((product) => (
-                      <Link
-                        key={product.slug}
-                        href={`/products/${product.slug}`}
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                        onClick={() => setIsProductsOpen(false)}
-                      >
-                        <div className="flex items-center space-x-2">
-                          <span className="text-xl">{product.icon}</span>
-                          <span className="font-medium">{product.title}</span>
-                        </div>
-                      </Link>
-                    ))
+                    products.map((product) => 
+                      product.externalUrl ? (
+                        <a
+                          key={product.slug}
+                          href={product.externalUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                          onClick={() => setIsProductsOpen(false)}
+                        >
+                          <div className="flex items-center space-x-2">
+                            <span className="text-xl">{product.icon}</span>
+                            <span className="font-medium">{product.title}</span>
+                          </div>
+                        </a>
+                      ) : (
+                        <Link
+                          key={product.slug}
+                          href={`/products/${product.slug}`}
+                          className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                          onClick={() => setIsProductsOpen(false)}
+                        >
+                          <div className="flex items-center space-x-2">
+                            <span className="text-xl">{product.icon}</span>
+                            <span className="font-medium">{product.title}</span>
+                          </div>
+                        </Link>
+                      )
+                    )
                   ) : (
                     <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">No products available</div>
                   )}
@@ -202,22 +218,41 @@ export function Navbar() {
                     All Products
                   </Link>
                   {products && products.length > 0 ? (
-                    products.map((product) => (
-                      <Link
-                        key={product.slug}
-                        href={`/products/${product.slug}`}
-                        className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
-                        onClick={() => {
-                          setIsOpen(false)
-                          setIsMobileProductsOpen(false)
-                        }}
-                      >
-                        <div className="flex items-center space-x-2">
-                          <span>{product.icon}</span>
-                          <span>{product.title}</span>
-                        </div>
-                      </Link>
-                    ))
+                    products.map((product) => 
+                      product.externalUrl ? (
+                        <a
+                          key={product.slug}
+                          href={product.externalUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                          onClick={() => {
+                            setIsOpen(false)
+                            setIsMobileProductsOpen(false)
+                          }}
+                        >
+                          <div className="flex items-center space-x-2">
+                            <span>{product.icon}</span>
+                            <span>{product.title}</span>
+                          </div>
+                        </a>
+                      ) : (
+                        <Link
+                          key={product.slug}
+                          href={`/products/${product.slug}`}
+                          className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                          onClick={() => {
+                            setIsOpen(false)
+                            setIsMobileProductsOpen(false)
+                          }}
+                        >
+                          <div className="flex items-center space-x-2">
+                            <span>{product.icon}</span>
+                            <span>{product.title}</span>
+                          </div>
+                        </Link>
+                      )
+                    )
                   ) : (
                     <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">No products available</div>
                   )}

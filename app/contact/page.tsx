@@ -94,9 +94,16 @@ export default function ContactPage() {
       }, 5000);
     } catch (error) {
       console.error("Form submission error:", error);
-      alert(
-        "Error sending message. Please try again or contact us directly."
+      const mailtoSubject = encodeURIComponent(`Contact from ${formData.name}`);
+      const mailtoBody = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCompany: ${formData.company}\nProduct/Solution: ${formData.productOrSolution}\n\nMessage:\n${formData.message}`
       );
+      const useEmail = confirm(
+        "Unable to send message right now. Would you like to send it via email instead?"
+      );
+      if (useEmail) {
+        window.location.href = `mailto:connect@infodra.ai?subject=${mailtoSubject}&body=${mailtoBody}`;
+      }
     } finally {
       setIsLoading(false);
     }
@@ -140,7 +147,7 @@ export default function ContactPage() {
 
             {/* Trust Indicator */}
             <p className="text-sm text-gray-500 dark:text-gray-400 font-normal">
-              Phone: +91 81481 46785 • Email: business@infodratechnologies.com
+              Phone: +91 81481 46785 • Email: connect@infodra.ai
             </p>
           </div>
         </div>
@@ -202,10 +209,10 @@ export default function ContactPage() {
                     Email
                   </h3>
                   <a
-                    href="mailto:business@infodratechnologies.com"
+                    href="mailto:connect@infodra.ai"
                     className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 break-all"
                   >
-                    business@infodratechnologies.com
+                    connect@infodra.ai
                   </a>
                 </div>
 
@@ -365,12 +372,14 @@ export default function ContactPage() {
                       <option value="ai-user-manual-generation">AI User Manual Generation</option>
                       <option value="ai-document-translator">AI Document Translator</option>
                       <option value="bizlead-database">BiZlead Database</option>
-                      <option value="all-products">All Products / General Inquiry</option>
+                      <option value="stafftrack">StaffTrack</option>
+                      <option value="general-inquiry">General Enquiry</option>
                     </optgroup>
-                    <optgroup label="Engineering Services">
-                      <option value="engineering-talent">Engineering Talent Services</option>
-                      <option value="custom-development">Custom Development</option>
-                      <option value="other-services">Other Services</option>
+                    <optgroup label="IT and AI-ML Talent">
+                      <option value="core-ai-ml-roles">Core AI & Machine Learning Roles (AI-ML)</option>
+                      <option value="data-analytics-talent">Data & Analytics Talent (AI/ML Integrated)</option>
+                      <option value="specialized-emerging-tech">Specialized & Emerging Technology Roles</option>
+                      <option value="core-it-infrastructure">Core IT & Infrastructure Talent (AI-Enabled)</option>
                     </optgroup>
                   </select>
                 </div>
