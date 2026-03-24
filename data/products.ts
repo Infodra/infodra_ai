@@ -40,6 +40,7 @@ export interface Product {
   tagline: string;
   shortDescription: string;
   icon: string;
+  category: 'ai' | 'saas';
   externalUrl?: string;
   serviceModes?: ServiceMode[];
   features: Feature[];
@@ -58,6 +59,7 @@ export const products: Product[] = [
     shortDescription:
       "Instantly translate video content into multiple languages with AI-powered voice cloning and lip-sync technology.",
     icon: "🎬",
+    category: 'ai',
     features: [
       {
         title: "Multi-Language Support",
@@ -155,6 +157,7 @@ export const products: Product[] = [
     shortDescription:
       "Generate comprehensive user manuals, product documentation, and technical guides automatically using advanced AI.",
     icon: "📖",
+    category: 'ai',
     features: [
       {
         title: "Automatic Content Generation",
@@ -252,6 +255,7 @@ export const products: Product[] = [
     shortDescription:
       "Automatically translate business documents, contracts, and reports into multiple languages with advanced AI.",
     icon: "📄",
+    category: 'ai',
     features: [
       {
         title: "Multi-Language Support",
@@ -345,6 +349,7 @@ export const products: Product[] = [
   {
     slug: "bizlead-database",
     title: "BiZlead Database",
+    category: 'saas',
     externalUrl: "https://www.bizlead.infodra.ai/home",
     tagline: "Access India's Most Comprehensive B2B Business Database",
     shortDescription:
@@ -443,6 +448,7 @@ export const products: Product[] = [
   {
     slug: "ai-voice-generation-studio",
     title: "AI Voice Generation Studio",
+    category: 'ai',
     tagline: "Create natural AI voiceovers or securely clone your own voice",
     shortDescription:
       "A professional AI platform that allows businesses and creators to generate high-quality voiceovers using platform AI voices or legally authorized custom voice cloning.",
@@ -553,8 +559,8 @@ export const products: Product[] = [
       },
     ],
     primaryCTA: {
-      text: "Contact for Price",
-      url: "/contact",
+      text: "Explore Key Features",
+      url: "#features",
     },
     secondaryCTA: {
       text: "WhatsApp",
@@ -564,6 +570,7 @@ export const products: Product[] = [
   {
     slug: "ai-prediction-ml-platforms",
     title: "AI Prediction / ML Platforms",
+    category: 'ai',
     tagline: "Advanced Machine Learning & Predictive Analytics for Business Intelligence",
     shortDescription:
       "Build, deploy, and manage custom machine learning models for predictive analytics, forecasting, and intelligent decision-making. Comprehensive ML platform designed for Indian enterprises with no-code and low-code options.",
@@ -655,8 +662,8 @@ export const products: Product[] = [
       },
     ],
     primaryCTA: {
-      text: "Contact for Price",
-      url: "/contact",
+      text: "Explore Key Features",
+      url: "#features",
     },
     secondaryCTA: {
       text: "WhatsApp",
@@ -666,6 +673,7 @@ export const products: Product[] = [
   {
     slug: "stafftrack",
     title: "StaffTrack",
+    category: 'saas',
     externalUrl: "https://www.stafftrack.infodra.ai/",
     tagline: "Smart GPS Attendance & Workforce Tracking",
     shortDescription:

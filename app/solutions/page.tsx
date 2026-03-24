@@ -324,7 +324,7 @@ export default function SolutionsPage() {
               href="/talent"
               className="bg-white text-gray-900 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 active:bg-gray-200 transition duration-200 shadow-lg"
             >
-              Deploy Engineering Talent
+              Deploy AI-ML Talent
             </Link>
             <Link
               href="/contact"

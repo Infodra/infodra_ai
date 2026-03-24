@@ -138,7 +138,7 @@ export function HeroSection() {
               href="/talent"
               className="w-full sm:w-auto px-10 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-xl font-semibold text-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all border-2 border-gray-200 dark:border-gray-700 hover:scale-105 shadow-lg"
             >
-              Deploy Engineering Talent
+              Deploy AI-ML Talent
             </Link>
           </div>
 

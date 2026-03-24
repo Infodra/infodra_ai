@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <IndustriesSection />
       <TechnologyExpertise />
+      <IndustriesSection />
       <WhyInfodra />
       <CTASection />
       <Footer />

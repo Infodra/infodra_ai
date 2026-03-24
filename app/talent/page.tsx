@@ -8,9 +8,9 @@ import { CTASection } from '@/components/CTASection'
 import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'IT and AI-ML Talent Solutions | Infodra AI',
+  title: 'AI-ML Talent Solutions | Infodra AI',
   description:
-    'Access world-class IT and AI-ML talent for your enterprise projects. Hire Machine Learning Engineers, Data Scientists, Cloud Architects, DevOps Engineers, and more.',
+    'Access world-class AI-ML talent for your enterprise projects. Hire Machine Learning Engineers, Data Scientists, Cloud Architects, DevOps Engineers, and more.',
   keywords: [
     'AI ML talent',
     'machine learning engineers',
@@ -42,7 +42,7 @@ export default function TalentPage() {
               {/* Title */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 <span className="block bg-gradient-to-r from-gray-900 via-primary-800 to-accent-800 dark:from-white dark:via-primary-300 dark:to-accent-300 bg-clip-text text-transparent mb-1 pb-1">
-                  IT and AI-ML
+                  AI-ML
                 </span>
                 <span className="block bg-gradient-to-r from-gray-900 via-primary-800 to-accent-800 dark:from-white dark:via-primary-300 dark:to-accent-300 bg-clip-text text-transparent pb-1">
                   Talent On Demand
@@ -81,7 +81,7 @@ export default function TalentPage() {
               <div className="relative w-full max-w-[800px]">
                 <Image
                   src="/talent-hero.png"
-                  alt="IT and AI-ML Talent"
+                  alt="AI-ML Talent"
                   width={800}
                   height={640}
                   className="rounded-2xl shadow-2xl object-contain"

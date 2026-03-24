@@ -371,16 +371,20 @@ export default function ContactPage() {
                       <option value="ai-video-translator">AI Video Translator</option>
                       <option value="ai-user-manual-generation">AI User Manual Generation</option>
                       <option value="ai-document-translator">AI Document Translator</option>
+                      <option value="ai-voice-generation-studio">AI Voice Generation Studio</option>
+                      <option value="ai-prediction-ml-platforms">AI Prediction / ML Platforms</option>
+                    </optgroup>
+                    <optgroup label="SaaS Products">
                       <option value="bizlead-database">BiZlead Database</option>
                       <option value="stafftrack">StaffTrack</option>
-                      <option value="general-inquiry">General Enquiry</option>
                     </optgroup>
-                    <optgroup label="IT and AI-ML Talent">
+                    <optgroup label="AI-ML Talent">
                       <option value="core-ai-ml-roles">Core AI & Machine Learning Roles (AI-ML)</option>
                       <option value="data-analytics-talent">Data & Analytics Talent (AI/ML Integrated)</option>
                       <option value="specialized-emerging-tech">Specialized & Emerging Technology Roles</option>
                       <option value="core-it-infrastructure">Core IT & Infrastructure Talent (AI-Enabled)</option>
                     </optgroup>
+                    <option value="general-inquiry">General Enquiry</option>
                   </select>
                 </div>
 

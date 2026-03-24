@@ -61,10 +61,10 @@ export function EngineeringTalentSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-            IT and AI-ML Talent for Enterprise Innovation
+            AI-ML Talent for Enterprise Innovation
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Deploy specialized IT and AI-ML professionals across machine learning, data engineering, emerging technologies, and cloud infrastructure domains.
+            Deploy specialized AI-ML professionals across machine learning, data engineering, emerging technologies, and cloud infrastructure domains.
           </p>
         </div>
 
