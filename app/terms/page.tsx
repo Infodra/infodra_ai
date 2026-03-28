@@ -171,8 +171,8 @@ export default function TermsOfService() {
               Information provided on the Website is for general informational purposes only and should not be 
               considered professional advice. For specific project requirements or consultations, please contact us 
               at{' '}
-              <a href="mailto:connect@infodra.ai" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
-                connect@infodra.ai
+              <a href="mailto:connect@infodratech.com" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
+                connect@infodratech.com
               </a>.
             </p>
           </section>
@@ -365,10 +365,10 @@ export default function TermsOfService() {
               <p className="text-gray-700 dark:text-gray-300 mb-1">
                 Email:{' '}
                 <a 
-                  href="mailto:connect@infodra.ai" 
+                  href="mailto:connect@infodratech.com" 
                   className="text-primary-600 dark:text-primary-400 hover:underline font-medium"
                 >
-                  connect@infodra.ai
+                  connect@infodratech.com
                 </a>
               </p>
               <p className="text-gray-700 dark:text-gray-300">

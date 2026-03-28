@@ -21,7 +21,7 @@ interface CTASectionProps {
 export function CTASection({
   title = "Build Intelligent Systems\nWith Infodra",
   description = "Partner with Infodra to accelerate your AI initiatives, digital transformation, and engineering projects.",
-  primaryCTA = { text: "Deploy AI-ML Talent", href: "mailto:connect@infodra.ai" },
+  primaryCTA = { text: "Deploy AI-ML Talent", href: "mailto:connect@infodratech.com" },
   secondaryCTA = { text: "Contact Us", href: "/contact" },
   showBadge = true,
   showTrustIndicators = true,

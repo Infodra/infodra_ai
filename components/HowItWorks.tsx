@@ -100,7 +100,7 @@ export function HowItWorks({ items }: HowItWorksProps = {}) {
         {/* CTA */}
         <div className="mt-16 text-center">
           <a
-            href="mailto:connect@infodra.ai"
+            href="mailto:connect@infodratech.com"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-lg font-semibold text-lg hover:opacity-90 transition-all hover:scale-105 shadow-lg"
           >
             Get Started Today

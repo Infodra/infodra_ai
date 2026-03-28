@@ -3,7 +3,11 @@
 import Link from 'next/link'
 import { products as allProducts } from '@/data/products'
 
-export function ProductsSection() {
+interface ProductsSectionProps {
+  category?: 'ai' | 'saas'
+}
+
+export function ProductsSection({ category }: ProductsSectionProps) {
   // Defensive check for products
   if (!allProducts || allProducts.length === 0) {
     return (
@@ -22,21 +26,21 @@ export function ProductsSection() {
     )
   }
 
-  const aiProducts = allProducts.filter(p => p.category === 'ai').map(product => ({
+  const aiProducts = (!category || category === 'ai') ? allProducts.filter(p => p.category === 'ai').map(product => ({
     icon: product.icon,
     name: product.title,
     description: product.shortDescription,
     features: product.features.slice(0, 4).map(f => f.title),
     slug: product.slug
-  }))
+  })) : []
 
-  const saasProducts = allProducts.filter(p => p.category === 'saas').map(product => ({
+  const saasProducts = (!category || category === 'saas') ? allProducts.filter(p => p.category === 'saas').map(product => ({
     icon: product.icon,
     name: product.title,
     description: product.shortDescription,
     features: product.features.slice(0, 4).map(f => f.title),
     slug: product.slug
-  }))
+  })) : []
 
   const renderProductCard = (product: typeof aiProducts[0], index: number) => (
     <div
@@ -92,33 +96,41 @@ export function ProductsSection() {
   return (
     <section id="products" className="py-24 bg-gradient-to-br from-gray-50 via-white to-primary-50 dark:from-gray-950 dark:via-gray-900 dark:to-primary-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* AI Products */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-            AI Products
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Intelligent AI-powered platforms designed to automate workflows, break language barriers, and unlock new growth opportunities.
-          </p>
-        </div>
+        {/* AI Platforms */}
+        {aiProducts.length > 0 && (
+          <>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+                AI Platforms
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Intelligent AI-powered platforms designed to automate workflows, break language barriers, and unlock new growth opportunities.
+              </p>
+            </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-          {aiProducts.map((product, index) => renderProductCard(product, index))}
-        </div>
+            <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${saasProducts.length > 0 ? 'mb-24' : ''}`}>
+              {aiProducts.map((product, index) => renderProductCard(product, index))}
+            </div>
+          </>
+        )}
 
         {/* SaaS Products */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-            SaaS Products
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Ready-to-use SaaS platforms for lead generation, workforce management, and business operations.
-          </p>
-        </div>
+        {saasProducts.length > 0 && (
+          <>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+                SaaS Products
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Ready-to-use SaaS platforms for lead generation, workforce management, and business operations.
+              </p>
+            </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {saasProducts.map((product, index) => renderProductCard(product, index))}
-        </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {saasProducts.map((product, index) => renderProductCard(product, index))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   )

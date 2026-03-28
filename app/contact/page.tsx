@@ -102,7 +102,7 @@ export default function ContactPage() {
         "Unable to send message right now. Would you like to send it via email instead?"
       );
       if (useEmail) {
-        window.location.href = `mailto:connect@infodra.ai?subject=${mailtoSubject}&body=${mailtoBody}`;
+        window.location.href = `mailto:connect@infodratech.com?subject=${mailtoSubject}&body=${mailtoBody}`;
       }
     } finally {
       setIsLoading(false);
@@ -147,7 +147,7 @@ export default function ContactPage() {
 
             {/* Trust Indicator */}
             <p className="text-sm text-gray-500 dark:text-gray-400 font-normal">
-              Phone: +91 81481 46785 • Email: connect@infodra.ai
+              Phone: +91 81481 46785 • Email: connect@infodratech.com
             </p>
           </div>
         </div>
@@ -209,10 +209,10 @@ export default function ContactPage() {
                     Email
                   </h3>
                   <a
-                    href="mailto:connect@infodra.ai"
+                    href="mailto:connect@infodratech.com"
                     className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 break-all"
                   >
-                    connect@infodra.ai
+                    connect@infodratech.com
                   </a>
                 </div>
 
@@ -367,7 +367,7 @@ export default function ContactPage() {
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   >
                     <option value="">Select a product or solution...</option>
-                    <optgroup label="AI Products">
+                    <optgroup label="AI Platforms">
                       <option value="ai-video-translator">AI Video Translator</option>
                       <option value="ai-user-manual-generation">AI User Manual Generation</option>
                       <option value="ai-document-translator">AI Document Translator</option>

@@ -134,7 +134,7 @@ npm start
 ## 📧 Contact
 
 - **Email**: info@infodra.ai
-- **Website**: [infodratechnologies.com](https://infodratechnologies.com)
+- **Website**: [infodratech.com](https://infodratech.com)
 - **LinkedIn**: [linkedin.com/company/infodra](https://linkedin.com/company/infodra)
 
 ## 📄 License

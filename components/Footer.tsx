@@ -13,7 +13,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-3">
-              <a href="https://www.infodratechnologies.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.infodratech.com" target="_blank" rel="noopener noreferrer">
                 <Image 
                   src="/CompanyNameLogo.png" 
                   alt="Infodra AI Logo" 
@@ -62,7 +62,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://infodratechnologies.com/resourcing"
+                  href="https://infodratech.com/resourcing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary-400 transition-colors"
@@ -71,13 +71,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <Link href="/solutions" className="hover:text-primary-400 transition-colors">
-                  Technology
-                </Link>
-              </li>
-              <li>
                 <a
-                  href="https://infodratechnologies.com/digital-solutions"
+                  href="https://infodratech.com/digital-solutions"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary-400 transition-colors"
@@ -86,14 +81,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://infodratechnologies.com/about"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary-400 transition-colors"
-                >
-                  About Infodra
-                </a>
+                <Link href="/about" className="hover:text-primary-400 transition-colors">
+                  About Us
+                </Link>
               </li>
             </ul>
           </div>
@@ -113,21 +103,21 @@ export function Footer() {
                 Terms of Service
               </Link>
               <a
-                href="mailto:connect@infodra.ai"
+                href="mailto:connect@infodratech.com"
                 className="hover:text-primary-400 transition-colors"
               >
-                connect@infodra.ai
+                connect@infodratech.com
               </a>
             </div>
           </div>
           <div className="mt-4 text-center text-gray-500 text-sm">
             <a
-              href="https://infodratechnologies.com"
+              href="https://infodratech.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary-400 transition-colors"
             >
-              infodratechnologies.com
+              infodratech.com
             </a>
           </div>
         </div>

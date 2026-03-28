@@ -10,10 +10,13 @@ import { products } from '@/data/products'
 export function Navbar() {
   const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
-  const [isProductsOpen, setIsProductsOpen] = useState(false)
-  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false)
+  const [isAIPlatformsOpen, setIsAIPlatformsOpen] = useState(false)
+  const [isSaaSProductsOpen, setIsSaaSProductsOpen] = useState(false)
+  const [isMobileAIOpen, setIsMobileAIOpen] = useState(false)
+  const [isMobileSaaSOpen, setIsMobileSaaSOpen] = useState(false)
   const { theme, setTheme } = useTheme()
-  const dropdownRef = useRef<HTMLDivElement>(null)
+  const aiDropdownRef = useRef<HTMLDivElement>(null)
+  const saasDropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setMounted(true)
@@ -21,8 +24,11 @@ export function Navbar() {
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsProductsOpen(false)
+      if (aiDropdownRef.current && !aiDropdownRef.current.contains(event.target as Node)) {
+        setIsAIPlatformsOpen(false)
+      }
+      if (saasDropdownRef.current && !saasDropdownRef.current.contains(event.target as Node)) {
+        setIsSaaSProductsOpen(false)
       }
     }
 
@@ -55,7 +61,7 @@ export function Navbar() {
             <span className="hidden lg:inline text-sm text-gray-600 dark:text-gray-400">
               A division of{' '}
               <a
-                href="https://www.infodratechnologies.com"
+                href="https://www.infodratech.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 dark:text-primary-400 hover:underline font-medium"
@@ -71,39 +77,39 @@ export function Navbar() {
               Home
             </Link>
             
-            {/* Products Dropdown */}
-            <div className="relative" ref={dropdownRef}>
+            {/* AI Platforms Dropdown */}
+            <div className="relative" ref={aiDropdownRef}>
               <button
                 type="button"
                 onClick={(e) => {
                   e.preventDefault()
                   e.stopPropagation()
-                  setIsProductsOpen(!isProductsOpen)
+                  setIsAIPlatformsOpen(!isAIPlatformsOpen)
+                  setIsSaaSProductsOpen(false)
                 }}
                 className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer"
-                aria-expanded={isProductsOpen}
+                aria-expanded={isAIPlatformsOpen}
                 aria-haspopup="true"
               >
-                <span>Products</span>
-                <ChevronDown size={16} className={`transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} />
+                <span>AI Platforms</span>
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isAIPlatformsOpen ? 'rotate-180' : ''}`} />
               </button>
               
-              {isProductsOpen && (
+              {isAIPlatformsOpen && (
                 <div 
                   className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 py-2 z-[100] pointer-events-auto"
                   role="menu"
-                  aria-label="Products menu"
+                  aria-label="AI Platforms menu"
                 >
                   <Link
-                    href="/products"
+                    href="/products/ai-platforms"
                     className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                    onClick={() => setIsProductsOpen(false)}
+                    onClick={() => setIsAIPlatformsOpen(false)}
                   >
-                    <div className="font-semibold">All Products</div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">View our complete product catalog</div>
+                    <div className="font-semibold">All AI Platforms</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">View all AI-powered products</div>
                   </Link>
                   <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
-                  <div className="px-4 py-1 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">AI Products</div>
                   {products && products.length > 0 ? (
                     products.filter(p => p.category === 'ai').map((product) => 
                       product.externalUrl ? (
@@ -113,7 +119,7 @@ export function Navbar() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                          onClick={() => setIsProductsOpen(false)}
+                          onClick={() => setIsAIPlatformsOpen(false)}
                         >
                           <div className="flex items-center space-x-2">
                             <span className="text-xl">{product.icon}</span>
@@ -125,7 +131,7 @@ export function Navbar() {
                           key={product.slug}
                           href={`/products/${product.slug}`}
                           className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                          onClick={() => setIsProductsOpen(false)}
+                          onClick={() => setIsAIPlatformsOpen(false)}
                         >
                           <div className="flex items-center space-x-2">
                             <span className="text-xl">{product.icon}</span>
@@ -135,8 +141,43 @@ export function Navbar() {
                       )
                     )
                   ) : null}
+                </div>
+              )}
+            </div>
+
+            {/* SaaS Products Dropdown */}
+            <div className="relative" ref={saasDropdownRef}>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  setIsSaaSProductsOpen(!isSaaSProductsOpen)
+                  setIsAIPlatformsOpen(false)
+                }}
+                className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer"
+                aria-expanded={isSaaSProductsOpen}
+                aria-haspopup="true"
+              >
+                <span>SaaS Products</span>
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isSaaSProductsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isSaaSProductsOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 py-2 z-[100] pointer-events-auto"
+                  role="menu"
+                  aria-label="SaaS Products menu"
+                >
+                  <Link
+                    href="/products/saas-products"
+                    className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    onClick={() => setIsSaaSProductsOpen(false)}
+                  >
+                    <div className="font-semibold">All SaaS Products</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">View all SaaS business platforms</div>
+                  </Link>
                   <div className="border-t border-gray-200 dark:border-gray-700 my-2"></div>
-                  <div className="px-4 py-1 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">SaaS Products</div>
                   {products && products.length > 0 ? (
                     products.filter(p => p.category === 'saas').map((product) => 
                       product.externalUrl ? (
@@ -146,7 +187,7 @@ export function Navbar() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                          onClick={() => setIsProductsOpen(false)}
+                          onClick={() => setIsSaaSProductsOpen(false)}
                         >
                           <div className="flex items-center space-x-2">
                             <span className="text-xl">{product.icon}</span>
@@ -158,7 +199,7 @@ export function Navbar() {
                           key={product.slug}
                           href={`/products/${product.slug}`}
                           className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                          onClick={() => setIsProductsOpen(false)}
+                          onClick={() => setIsSaaSProductsOpen(false)}
                         >
                           <div className="flex items-center space-x-2">
                             <span className="text-xl">{product.icon}</span>
@@ -175,8 +216,8 @@ export function Navbar() {
             <Link href="/talent" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
               Talent
             </Link>
-            <Link href="/solutions" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-              Solutions
+            <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
+              About Us
             </Link>
 
             <button
@@ -225,31 +266,30 @@ export function Navbar() {
               Home
             </Link>
             
-            {/* Products Expandable */}
+            {/* AI Platforms Expandable */}
             <div>
               <button
                 type="button"
-                onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
+                onClick={() => setIsMobileAIOpen(!isMobileAIOpen)}
                 className="w-full flex items-center justify-between px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
-                aria-expanded={isMobileProductsOpen}
+                aria-expanded={isMobileAIOpen}
               >
-                <span>Products</span>
-                <ChevronDown size={16} className={`transition-transform duration-200 ${isMobileProductsOpen ? 'rotate-180' : ''}`} />
+                <span>AI Platforms</span>
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isMobileAIOpen ? 'rotate-180' : ''}`} />
               </button>
               
-              {isMobileProductsOpen && (
+              {isMobileAIOpen && (
                 <div className="pl-4 mt-2 space-y-2">
                   <Link
-                    href="/products"
-                    className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                    href="/products/ai-platforms"
+                    className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold"
                     onClick={() => {
                       setIsOpen(false)
-                      setIsMobileProductsOpen(false)
+                      setIsMobileAIOpen(false)
                     }}
                   >
-                    All Products
+                    All AI Platforms
                   </Link>
-                  <div className="px-4 py-1 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">AI Products</div>
                   {products && products.length > 0 ? (
                     products.filter(p => p.category === 'ai').map((product) => 
                       product.externalUrl ? (
@@ -261,7 +301,7 @@ export function Navbar() {
                           className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
                           onClick={() => {
                             setIsOpen(false)
-                            setIsMobileProductsOpen(false)
+                            setIsMobileAIOpen(false)
                           }}
                         >
                           <div className="flex items-center space-x-2">
@@ -276,7 +316,7 @@ export function Navbar() {
                           className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
                           onClick={() => {
                             setIsOpen(false)
-                            setIsMobileProductsOpen(false)
+                            setIsMobileAIOpen(false)
                           }}
                         >
                           <div className="flex items-center space-x-2">
@@ -287,7 +327,34 @@ export function Navbar() {
                       )
                     )
                   ) : null}
-                  <div className="px-4 py-1 text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mt-2">SaaS Products</div>
+                </div>
+              )}
+            </div>
+
+            {/* SaaS Products Expandable */}
+            <div>
+              <button
+                type="button"
+                onClick={() => setIsMobileSaaSOpen(!isMobileSaaSOpen)}
+                className="w-full flex items-center justify-between px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                aria-expanded={isMobileSaaSOpen}
+              >
+                <span>SaaS Products</span>
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isMobileSaaSOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isMobileSaaSOpen && (
+                <div className="pl-4 mt-2 space-y-2">
+                  <Link
+                    href="/products/saas-products"
+                    className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-semibold"
+                    onClick={() => {
+                      setIsOpen(false)
+                      setIsMobileSaaSOpen(false)
+                    }}
+                  >
+                    All SaaS Products
+                  </Link>
                   {products && products.length > 0 ? (
                     products.filter(p => p.category === 'saas').map((product) => 
                       product.externalUrl ? (
@@ -299,7 +366,7 @@ export function Navbar() {
                           className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
                           onClick={() => {
                             setIsOpen(false)
-                            setIsMobileProductsOpen(false)
+                            setIsMobileSaaSOpen(false)
                           }}
                         >
                           <div className="flex items-center space-x-2">
@@ -314,7 +381,7 @@ export function Navbar() {
                           className="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
                           onClick={() => {
                             setIsOpen(false)
-                            setIsMobileProductsOpen(false)
+                            setIsMobileSaaSOpen(false)
                           }}
                         >
                           <div className="flex items-center space-x-2">
@@ -337,11 +404,11 @@ export function Navbar() {
               Talent
             </Link>
             <Link
-              href="/solutions"
+              href="/about"
               className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
-              Solutions
+              About Us
             </Link>
             
             <Link
