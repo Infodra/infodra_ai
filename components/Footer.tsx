@@ -34,23 +34,23 @@ export function Footer() {
             <h3 className="text-white font-semibold text-lg mb-3">Products</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/products/ai-video-translator" className="hover:text-primary-400 transition-colors">
-                  AI Video Translator
+                <Link href="/products/saas-products" className="hover:text-primary-400 transition-colors">
+                  All SaaS Products
                 </Link>
               </li>
               <li>
                 <Link href="/products/bizlead-database" className="hover:text-primary-400 transition-colors">
-                  BizLead
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/ai-prediction-ml-platforms" className="hover:text-primary-400 transition-colors">
-                  AI Assistant
+                  BiZlead Database
                 </Link>
               </li>
               <li>
                 <Link href="/products/stafftrack" className="hover:text-primary-400 transition-colors">
                   StaffTrack
+                </Link>
+              </li>
+              <li>
+                <Link href="/case-studies" className="hover:text-primary-400 transition-colors">
+                  AI Platforms (Case Studies)
                 </Link>
               </li>
             </ul>

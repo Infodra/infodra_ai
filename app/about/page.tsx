@@ -62,29 +62,23 @@ export default function AboutPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/30 dark:from-gray-900 dark:via-gray-900 dark:to-blue-950/50 pt-24 pb-16">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-[500px] h-[500px] -top-48 -left-48 bg-blue-300 dark:bg-blue-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-15 animate-float"></div>
-          <div className="absolute w-[500px] h-[500px] top-1/3 -right-48 bg-indigo-300 dark:bg-indigo-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-15 animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute w-[500px] h-[500px] -bottom-48 left-1/3 bg-blue-400 dark:bg-blue-800 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-15 animate-float" style={{ animationDelay: '4s' }}></div>
+      <section className="relative overflow-hidden pt-32 pb-24 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700">
+        <div className="absolute inset-0 opacity-20 mix-blend-overlay">
+          <div className="absolute w-[500px] h-[500px] -top-48 -left-48 bg-primary-400 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute w-[500px] h-[500px] top-1/3 -right-48 bg-accent-400 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute w-[500px] h-[500px] -bottom-48 left-1/3 bg-primary-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
         </div>
 
-        <div className="relative max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-fade-in">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-[1.4]">
-              <span className="block bg-gradient-to-r from-gray-900 via-primary-800 to-accent-800 dark:from-white dark:via-primary-300 dark:to-accent-300 bg-clip-text text-transparent mb-4 pb-2">
-                About Infodra AI
-              </span>
-            </h1>
-
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-[750px] mx-auto leading-relaxed">
-              Infodra AI is the AI and digital product division of Infodra Technologies — a new-age technology startup led by industry veterans with over 20 years of experience, building intelligent SaaS products, AI-powered automation platforms, and deploying engineering talent for modern enterprises.
-            </p>
-
-            <p className="text-sm text-gray-500 dark:text-gray-400 font-normal">
-              AI Platforms • SaaS Products • Engineering Talent • Custom Solutions
-            </p>
-          </div>
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">
+            About Infodra AI
+          </h1>
+          <p className="mt-6 text-lg md:text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed">
+            Infodra AI is the AI and digital product division of Infodra Technologies — a new-age technology startup led by industry veterans with over 20 years of experience, building intelligent SaaS products, AI-powered automation platforms, and deploying engineering talent for modern enterprises.
+          </p>
+          <p className="mt-8 text-sm text-primary-200/80">
+            AI Platforms • SaaS Products • Engineering Talent • Custom Solutions
+          </p>
         </div>
       </section>
 
@@ -216,7 +210,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-primary-900 to-accent-900 text-white py-20 overflow-hidden mx-4 sm:mx-6 lg:mx-8 my-20 rounded-3xl">
+      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-20 overflow-hidden mx-4 sm:mx-6 lg:mx-8 my-20 rounded-3xl">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Ready to Work With Us?

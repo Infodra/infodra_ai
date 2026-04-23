@@ -1,164 +1,112 @@
-'use client'
+﻿'use client'
 
-import Link from 'next/link'
+import { ScanSearch, Activity, PenTool, Wrench, TrendingDown, TrendingUp, ArrowDown } from 'lucide-react'
 
 export function SolutionsSection() {
   const solutions = [
     {
-      icon: '🤖',
-      title: 'AI Automation Solutions',
-      description: 'Automate business operations using intelligent AI systems that streamline workflows, analyze data, and improve operational efficiency.',
-      examples: [
-        'AI document processing',
-        'Workflow automation',
-        'Intelligent reporting systems',
-        'Content generation tools'
-      ]
+      icon: ScanSearch,
+      title: 'Automated Quality Inspection',
+      description:
+        'Always-on, camera-based inspection that catches defects earlier and keeps quality consistent across every shift — without slowing the line.',
+      capabilities: [
+        'Surface defect detection on parts and assemblies',
+        'Dimensional measurement from images and scans',
+        'Weld, paint, casting and finish inspection',
+      ],
+      metric: { icon: TrendingDown, label: 'Inspection Time', value: '↓ 50–60%' },
     },
     {
-      icon: '⚡',
-      title: 'Custom AI Application Development',
-      description: 'Design and build tailored AI-powered applications that solve complex business challenges and enable data-driven decision making.',
-      examples: [
-        'Predictive analytics platforms',
-        'AI-powered chat systems',
-        'Recommendation engines',
-        'Computer vision solutions'
-      ]
+      icon: Activity,
+      title: 'Production Optimization',
+      description:
+        'Turn machine data, downtime logs and shop-floor activity into clear actions that supervisors can take the same shift — protecting throughput and OEE.',
+      capabilities: [
+        'Live OEE across lines, machines and shifts',
+        'Downtime root-cause and changeover analytics',
+        'Bottleneck and throughput insights',
+      ],
+      metric: { icon: TrendingUp, label: 'OEE Improvement', value: '↑ 10–20%' },
     },
     {
-      icon: '☁️',
-      title: 'SaaS Platform Development',
-      description: 'Develop scalable SaaS platforms using modern cloud infrastructure and secure multi-tenant architectures designed for enterprise use.',
-      examples: [
-        'Cloud-native SaaS applications',
-        'Subscription platforms',
-        'Enterprise automation tools',
-        'Scalable web platforms'
-      ]
+      icon: PenTool,
+      title: 'Engineering Automation',
+      description:
+        'Free your design team from repetitive checks and manual data entry. Standardize drawings, BOMs and engineering documents with rule-based intelligence.',
+      capabilities: [
+        'CAD model and drawing automation',
+        'Drawing validation against design standards',
+        'BOM extraction from PDFs, DWG and legacy files',
+      ],
+      metric: { icon: ArrowDown, label: 'Engineering Effort', value: '↓ up to 50%' },
     },
     {
-      icon: '👥',
-      title: 'Engineering Team Augmentation',
-      description: 'Scale your development capabilities quickly with experienced engineers across AI, software development, cloud infrastructure, and data engineering.',
-      examples: [
-        'AI engineers',
-        'Full-stack developers',
-        'DevOps engineers',
-        'Data engineers',
-        'CAD engineers'
-      ]
+      icon: Wrench,
+      title: 'Predictive Maintenance',
+      description:
+        'Catch early signs of wear in motors, pumps, gearboxes and CNC equipment so maintenance is planned, not reactive — and production schedules stay intact.',
+      capabilities: [
+        'Vibration, temperature and current-based monitoring',
+        'Failure-mode alerts to maintenance supervisors',
+        'Spare-parts and intervention planning',
+      ],
+      metric: { icon: TrendingDown, label: 'Unplanned Downtime', value: '↓ 30–40%' },
     },
-    {
-      icon: '🚀',
-      title: 'Digital Transformation Solutions',
-      description: 'Modernize legacy systems and integrate intelligent technologies to improve productivity, automation, and operational visibility.',
-      examples: [
-        'Cloud migration',
-        'System modernization',
-        'Workflow automation',
-        'Enterprise software integration'
-      ]
-    }
-  ]
-
-  const engagementModels = [
-    {
-      title: 'Dedicated Engineering Teams',
-      description: 'Build a fully dedicated team of engineers aligned to your project goals and timeline'
-    },
-    {
-      title: 'Project-Based Development',
-      description: 'Fixed-scope engagements for specific AI platforms or software development projects'
-    },
-    {
-      title: 'Technical Consulting',
-      description: 'Expert guidance on AI strategy, architecture design, and technology selection'
-    },
-    {
-      title: 'Long-Term Engineering Support',
-      description: 'Ongoing technical support and feature development for your platforms'
-    }
   ]
 
   return (
-    <>
-      {/* Core Solutions Section */}
-      <section id="solutions" className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Our Core Solutions
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Comprehensive AI and engineering solutions to transform your business
-            </p>
-          </div>
+    <section
+      id="solutions"
+      className="relative py-24 bg-white overflow-hidden"
+    >
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <p className="eyebrow mb-3">Our Solutions</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-steel-900 mb-4 tracking-tight">
+            Four Solutions Built for Manufacturing Outcomes
+          </h2>
+          <p className="text-lg text-steel-600 max-w-3xl mx-auto leading-relaxed">
+            Focused offerings that target the work happening every day on your shop floor and in your engineering office — each with a clear, measurable impact.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
-              <div
-                key={index}
-                className="group bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="text-5xl mb-4">{solution.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {solutions.map((solution, index) => {
+            const Icon = solution.icon
+            const MIcon = solution.metric.icon
+            return (
+              <div key={index} className="industrial-card !bg-white p-6 flex flex-col">
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 rounded-t-lg" />
+
+                <div className="icon-tile mb-5">
+                  <Icon size={24} className="text-white" strokeWidth={1.75} />
+                </div>
+
+                <h3 className="text-xl font-bold text-steel-900 mb-2 tracking-tight">
                   {solution.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                <p className="text-sm text-steel-600 mb-4 leading-relaxed">
                   {solution.description}
                 </p>
-                <div className="space-y-2">
-                  <p className="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wide">
-                    Examples:
-                  </p>
-                  <ul className="space-y-1.5">
-                    {solution.examples.map((example, idx) => (
-                      <li
-                        key={idx}
-                        className="text-sm text-gray-600 dark:text-gray-400 flex items-start"
-                      >
-                        <span className="text-primary-500 dark:text-primary-400 mr-2">•</span>
-                        <span>{example}</span>
-                      </li>
-                    ))}
-                  </ul>
+
+                <div className="metric-badge mb-4 self-start">
+                  <MIcon size={12} strokeWidth={2.5} />
+                  <span>{solution.metric.value} {solution.metric.label}</span>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Engagement Models Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Flexible Engagement Models
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Choose the partnership model that fits your needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {engagementModels.map((model, index) => (
-              <div
-                key={index}
-                className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700 hover:border-primary-300 dark:hover:border-primary-600 hover:shadow-lg transition-all duration-300"
-              >
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                  {model.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {model.description}
-                </p>
+                <ul className="space-y-1.5 mt-auto pt-3 border-t border-steel-200">
+                  {solution.capabilities.map((cap, idx) => (
+                    <li key={idx} className="text-xs text-steel-600 flex items-start">
+                      <span className="text-primary-500 mr-2 mt-0.5">▸</span>
+                      <span>{cap}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
+            )
+          })}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }

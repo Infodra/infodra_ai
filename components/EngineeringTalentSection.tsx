@@ -1,58 +1,48 @@
 'use client'
 
-import { Brain, BarChart3, Cpu, Cloud } from 'lucide-react'
+import { Eye, Activity, FileCog, Bot } from 'lucide-react'
 
 export function EngineeringTalentSection() {
   const capabilities = [
     {
-      icon: Brain,
-      title: 'Core AI & Machine Learning Roles (AI-ML)',
+      icon: Eye,
+      title: 'Manufacturing AI & Computer Vision Experts',
       roles: [
-        { name: 'Machine Learning Engineer', desc: 'Designs, builds, and deploys ML models for prediction and automation.' },
-        { name: 'AI/ML Architect', desc: 'Designs complex AI systems, bridging business needs and technical reality.' },
-        { name: 'AI Research Scientist', desc: 'Develops new algorithms, frameworks, and deep learning techniques (NLP, Computer Vision).' },
-        { name: 'Computer Vision Engineer', desc: 'Interprets visual data for autonomous vehicles, face recognition, and medical diagnostics.' },
-        { name: 'NLP Engineer', desc: 'Develops systems that understand and generate human language — chatbots, sentiment analysis.' },
-        { name: 'MLOps Engineer', desc: 'Bridges ML research and production — deployment, monitoring, and scaling models.' },
-        { name: 'Prompt Engineer', desc: 'Designs and optimizes prompts for Large Language Models (LLMs) and Generative AI.' },
+        { name: 'Computer Vision Engineers', desc: 'Build defect detection and visual inspection systems for high-volume production lines.' },
+        { name: 'Edge AI Engineers', desc: 'Deploy AI models on shop-floor cameras and integrate pass/fail signals with PLCs.' },
+        { name: 'Industrial AI Specialists', desc: 'Apply AI to real plant problems — surface inspection, dimensional checks, assembly verification.' },
       ],
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-primary-600 to-primary-500',
     },
     {
-      icon: BarChart3,
-      title: 'Data & Analytics Talent (AI/ML Integrated)',
+      icon: Activity,
+      title: 'Production & Maintenance AI Specialists',
       roles: [
-        { name: 'Data Scientist', desc: 'Analyzes and interprets complex datasets to uncover patterns for decision-making.' },
-        { name: 'Data Engineer', desc: 'Builds infrastructure and pipelines (ETL) to feed data into AI models.' },
-        { name: 'AI Data Analyst', desc: 'Combines traditional data analysis with predictive AI algorithms for strategic insights.' },
-        { name: 'Big Data Engineer', desc: 'Manages massive datasets using distributed computing frameworks like Hadoop and Spark.' },
+        { name: 'Predictive Maintenance Engineers', desc: 'Use vibration, temperature and current data to flag equipment failures before they cause downtime.' },
+        { name: 'OEE & Production Analytics Experts', desc: 'Turn shop-floor data into clear views of availability, performance and quality.' },
+        { name: 'IoT & Sensor Data Engineers', desc: 'Connect machines, sensors and historians so production data is reliable and usable.' },
       ],
-      gradient: 'from-emerald-500 to-teal-500',
+      gradient: 'from-primary-700 to-accent-500',
     },
     {
-      icon: Cpu,
-      title: 'Specialized & Emerging Technology Roles',
+      icon: FileCog,
+      title: 'Engineering Automation Experts',
       roles: [
-        { name: 'AI Product Manager', desc: 'Defines AI product roadmaps, connecting AI teams with business strategy.' },
-        { name: 'AI Ethics Specialist', desc: 'Ensures AI systems are fair, unbiased, and legally compliant.' },
-        { name: 'AI Testing/QA Engineer', desc: 'Validates AI model quality, reliability, and performance.' },
-        { name: 'Robotics Engineer', desc: 'Designs intelligent robots leveraging AI for perception and action.' },
-        { name: 'Blockchain Developer', desc: 'Develops decentralized applications (DApps) and smart contracts.' },
-        { name: 'IoT Solutions Architect', desc: 'Orchestrates connected physical devices and digital ecosystems.' },
+        { name: 'CAD Automation Engineers', desc: 'Automate repetitive design tasks in Inventor, SolidWorks and AutoCAD with rule-based scripts and AI.' },
+        { name: 'Drawing Validation & BOM Automation Specialists', desc: 'Auto-check engineering drawings against standards and extract structured BOMs from PDFs and DWG files.' },
+        { name: 'Document Intelligence Engineers', desc: 'Pull useful data out of GA drawings, datasheets, supplier documents and quality reports.' },
       ],
-      gradient: 'from-purple-500 to-pink-500',
+      gradient: 'from-accent-600 to-primary-600',
     },
     {
-      icon: Cloud,
-      title: 'Core IT & Infrastructure Talent (AI-Enabled)',
+      icon: Bot,
+      title: 'Business AI & Automation Experts',
       roles: [
-        { name: 'Cloud Architect/Engineer', desc: 'Designs and implements scalable, secure cloud infrastructure (AWS, Azure, GCP).' },
-        { name: 'DevOps Engineer', desc: 'Manages CI/CD pipelines for rapid, secure software delivery.' },
-        { name: 'Full Stack Developer', desc: 'Builds end-to-end applications, often integrating AI features (e.g., MERN stack).' },
-        { name: 'Cybersecurity Specialist', desc: 'Protects networks and AI systems from threats.' },
-        { name: 'Site Reliability Engineer (SRE)', desc: 'Ensures systems are reliable, scalable, and highly available.' },
+        { name: 'AI Assistants for Operations', desc: 'Build internal copilots for sales, purchase, HR and customer support teams.' },
+        { name: 'Document Processing Automation', desc: 'Automate invoices, POs, contracts and quality certificates with AI-driven extraction and routing.' },
+        { name: 'AI Analytics & Reporting Specialists', desc: 'Deliver dashboards and AI-generated insights on production, quality, sales and finance.' },
       ],
-      gradient: 'from-indigo-500 to-blue-500',
+      gradient: 'from-primary-500 to-accent-500',
     },
   ]
 
@@ -60,11 +50,14 @@ export function EngineeringTalentSection() {
     <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-primary-50/30 dark:from-gray-900 dark:via-gray-900 dark:to-primary-950/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-primary-700 dark:text-primary-400 mb-3">
+            Specialized Roles
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-            AI-ML Talent for Enterprise Innovation
+            AI Experts Aligned to Manufacturing & Engineering
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Deploy specialized AI-ML professionals across machine learning, data engineering, emerging technologies, and cloud infrastructure domains.
+            Practical AI specialists who understand inspection, downtime, drawings, BOMs and shop-floor realities — not just generic IT skills.
           </p>
         </div>
 
@@ -74,21 +67,17 @@ export function EngineeringTalentSection() {
               key={index}
               className="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-transparent transition-all hover:shadow-2xl p-8"
             >
-              {/* Gradient overlay on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${capability.gradient} opacity-0 group-hover:opacity-5 transition-opacity`}></div>
-              
+
               <div className="relative">
-                {/* Icon */}
                 <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${capability.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                   <capability.icon size={28} className="text-white" />
                 </div>
-                
-                {/* Title */}
+
                 <h3 className="text-xl font-bold mb-5 text-gray-900 dark:text-white">
                   {capability.title}
                 </h3>
-                
-                {/* Roles List with Descriptions */}
+
                 <ul className="space-y-3">
                   {capability.roles.map((role, roleIndex) => (
                     <li key={roleIndex} className="text-sm text-gray-600 dark:text-gray-400 flex items-start">

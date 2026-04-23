@@ -28,6 +28,59 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Blueprint grid for industrial dark sections */
+  .bg-blueprint {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+@layer components {
+  /* Industrial card — sharper edges, steel border, lift on hover */
+  .industrial-card {
+    @apply relative rounded-lg border border-steel-200 dark:border-steel-800 bg-white dark:bg-steel-950 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary-400 dark:hover:border-primary-500;
+  }
+  .industrial-card-dark {
+    @apply relative rounded-lg border border-white/10 bg-white/[0.03] backdrop-blur-sm shadow-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-primary-400/60 hover:bg-white/[0.06];
+  }
+
+  /* Metric badge for ROI highlights */
+  .metric-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary-50 dark:bg-primary-950/40 text-primary-700 dark:text-primary-300 text-xs font-bold tracking-tight border border-primary-200 dark:border-primary-800/60;
+  }
+  .metric-badge-dark {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary-500/15 text-primary-200 text-xs font-bold tracking-tight border border-primary-400/30;
+  }
+
+  /* Industrial icon container — sharper square */
+  .icon-tile {
+    @apply w-12 h-12 rounded-md bg-gradient-ai flex items-center justify-center shadow-md shadow-primary-900/20;
+  }
+  .icon-tile-lg {
+    @apply w-14 h-14 rounded-md bg-gradient-ai flex items-center justify-center shadow-lg shadow-primary-900/20;
+  }
+
+  /* CTA buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-gradient-ai text-white font-semibold tracking-tight shadow-lg shadow-primary-900/20 hover:shadow-xl hover:shadow-primary-900/30 hover:-translate-y-0.5 transition-all;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-white dark:bg-steel-900 text-steel-900 dark:text-white font-semibold tracking-tight border-2 border-steel-200 dark:border-steel-700 hover:border-primary-500 dark:hover:border-primary-500 hover:-translate-y-0.5 transition-all;
+  }
+  .btn-secondary-on-dark {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-md bg-transparent text-white font-semibold tracking-tight border-2 border-white/40 hover:border-white hover:bg-white/5 transition-all;
+  }
+
+  /* Section eyebrow label */
+  .eyebrow {
+    @apply text-xs font-bold tracking-[0.18em] uppercase text-primary-600 dark:text-primary-400;
+  }
+  .eyebrow-on-dark {
+    @apply text-xs font-bold tracking-[0.18em] uppercase text-primary-300;
+  }
 }
 
 /* Custom scrollbar */
