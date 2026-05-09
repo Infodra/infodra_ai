@@ -147,7 +147,7 @@ export default function ContactPage() {
 
             {/* Trust Indicator */}
             <p className="text-sm text-gray-500 dark:text-gray-400 font-normal">
-              Phone: +91 81481 46785 • Email: connect@infodratech.com
+              Phone: +91 93637 53540 • Email: connect@infodratech.com
             </p>
           </div>
         </div>
@@ -196,10 +196,10 @@ export default function ContactPage() {
                     Phone
                   </h3>
                   <a
-                    href="tel:+918148146785"
+                    href="tel:+919363753540"
                     className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold"
                   >
-                    +91 81481 46785
+                    +91 93637 53540
                   </a>
                 </div>
 
@@ -525,7 +525,7 @@ export default function ContactPage() {
             {[
               {
                 q: "How long does it take to get a response?",
-                a: "We aim to respond to all inquiries within 24 hours during business hours. For urgent matters, please call us directly at +91 81481 46785.",
+                a: "We aim to respond to all inquiries within 24 hours during business hours. For urgent matters, please call us directly at +91 93637 53540.",
               },
               {
                 q: "Which products are best for my business?",
