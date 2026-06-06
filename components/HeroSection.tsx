@@ -54,12 +54,12 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
-          <div className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur text-primary-100 text-sm font-semibold mb-5 border border-white/20">
+          <div className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur text-primary-100 text-base font-semibold mb-5 border border-white/20">
             <Sparkles size={16} />
             <span>AI for Manufacturing & Engineering</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.15] text-white">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-[1.15] text-white">
             <span className="block whitespace-nowrap mb-3">
               Better Quality. Higher Output.
             </span>
@@ -75,20 +75,20 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <Link
               href="/#use-cases"
-              className="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur text-white rounded-xl font-semibold text-lg hover:bg-white/20 transition-all border-2 border-white/30 hover:scale-105 shadow-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur text-white rounded-xl font-semibold text-xl hover:bg-white/20 transition-all border-2 border-white/30 hover:scale-105 shadow-lg"
             >
               View Use Cases
             </Link>
             <Link
               href="/contact"
-              className="group w-full sm:w-auto px-8 py-4 bg-white text-primary-900 rounded-xl font-semibold text-lg hover:bg-primary-50 transition-all hover:scale-105 flex items-center justify-center space-x-2 shadow-xl shadow-primary-950/30"
+              className="group w-full sm:w-auto px-8 py-4 bg-white text-primary-900 rounded-xl font-semibold text-xl hover:bg-primary-50 transition-all hover:scale-105 flex items-center justify-center space-x-2 shadow-xl shadow-primary-950/30"
             >
               <span>See AI in Your Plant</span>
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
-          <p className="text-sm text-primary-200 font-normal">
+          <p className="text-base text-primary-200 font-normal">
             Inspection time ↓ 50–60% · OEE ↑ 10–20% · Unplanned downtime ↓ 30–40% · Engineering effort ↓ 50%
           </p>
         </div>
