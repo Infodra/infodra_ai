@@ -305,10 +305,10 @@ export default function PrivacyPolicy() {
               <p className="text-gray-700 dark:text-gray-300 mb-1">
                 Email:{' '}
                 <a 
-                  href="mailto:connect@infodratech.com" 
+                  href="mailto:info@infodra.in" 
                   className="text-primary-600 dark:text-primary-400 hover:underline font-medium"
                 >
-                  connect@infodratech.com
+                  info@infodra.in
                 </a>
               </p>
               <p className="text-gray-700 dark:text-gray-300">
@@ -359,3 +359,4 @@ export default function PrivacyPolicy() {
     </div>
   )
 }
+

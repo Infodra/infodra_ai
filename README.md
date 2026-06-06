@@ -6,13 +6,13 @@ A professional, enterprise-grade AI Engineering and Technology Consulting websit
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8)
 
-## 🚀 Overview
+## Overview
 
 **Infodra AI** represents Infodra Technologies Pvt Ltd - a company that provides AI engineering, software development, CAD engineering services, and technical staffing, while also building AI-powered SaaS platforms.
 
 The website features a premium enterprise technology company design, similar to EPAM, Globant, or Stripe-style modern SaaS websites.
 
-## 📋 Website Sections
+## Website Sections
 
 1. **Hero Section** - AI Engineering & Technical Talent for Modern Enterprises
 2. **Engineering & Talent Solutions** - 4 service offerings in 2x2 grid
@@ -24,7 +24,7 @@ The website features a premium enterprise technology company design, similar to 
 8. **Call to Action** - Conversion-focused section
 9. **Footer** - Comprehensive navigation and links
 
-## 🎯 Key Features
+## Key Features
 
 - **Premium Enterprise Design**: Modern SaaS style inspired by leading tech companies
 - **Dark/Light Theme**: Seamless theme switching with system preference support
@@ -33,7 +33,7 @@ The website features a premium enterprise technology company design, similar to 
 - **SEO Optimized**: Proper meta tags and semantic HTML
 - **Performance Optimized**: Built with Next.js 14 for optimal performance
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript
@@ -41,7 +41,7 @@ The website features a premium enterprise technology company design, similar to 
 - **Icons**: Lucide React
 - **Theme**: next-themes
 
-## 📦 Installation
+## Installation
 
 1. **Install dependencies:**
 
@@ -59,33 +59,33 @@ npm run dev
 
 Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 infodra-ai/
-├── app/
-│   ├── layout.tsx              # Root layout with theme provider
-│   ├── page.tsx                # Homepage with all sections
-│   └── globals.css             # Global styles
-├── components/
-│   ├── ThemeProvider.tsx       # Theme context provider
-│   ├── Navbar.tsx              # Navigation bar
-│   ├── HeroSection.tsx         # Hero section
-│   ├── TalentSolutions.tsx     # Engineering & Talent Solutions
-│   ├── IndustriesSection.tsx   # Industries served
-│   ├── TechnologyExpertise.tsx # Technology capabilities
-│   ├── EngagementModels.tsx    # Flexible engagement models
-│   ├── ProductsSection.tsx     # Innovation platforms
-│   ├── WhyInfodra.tsx          # Why choose Infodra
-│   ├── CTASection.tsx          # Call to action
-│   └── Footer.tsx              # Footer with links
-├── public/                 # Static assets
-├── tailwind.config.js      # Tailwind configuration
-├── next.config.js          # Next.js configuration
-└── package.json
+|- app/
+|  |- layout.tsx              # Root layout with theme provider
+|  |- page.tsx                # Homepage with all sections
+|  |- globals.css             # Global styles
+|- components/
+|  |- ThemeProvider.tsx       # Theme context provider
+|  |- Navbar.tsx              # Navigation bar
+|  |- HeroSection.tsx         # Hero section
+|  |- TalentSolutions.tsx     # Engineering & Talent Solutions
+|  |- IndustriesSection.tsx   # Industries served
+|  |- TechnologyExpertise.tsx # Technology capabilities
+|  |- EngagementModels.tsx    # Flexible engagement models
+|  |- ProductsSection.tsx     # Innovation platforms
+|  |- WhyInfodra.tsx          # Why choose Infodra
+|  |- CTASection.tsx          # Call to action
+|  |- Footer.tsx              # Footer with links
+|- public/                 # Static assets
+|- tailwind.config.js      # Tailwind configuration
+|- next.config.js          # Next.js configuration
+|- package.json
 ```
 
-## 🎨 Customization
+## Customization
 
 ### Colors
 
@@ -102,21 +102,21 @@ colors: {
 
 To update content, edit the respective component files in the `components/` directory.
 
-## 📱 Responsive Design
+## Responsive Design
 
 The website is fully responsive with breakpoints:
 - **Mobile**: < 768px
 - **Tablet**: 768px - 1024px
 - **Desktop**: > 1024px
 
-## 🌙 Theme Support
+## Theme Support
 
 The website supports both light and dark themes:
 - Automatic system preference detection
 - Manual toggle via navbar
 - Persistent theme selection
 
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 
@@ -131,16 +131,17 @@ npm run build
 npm start
 ```
 
-## 📧 Contact
+## Contact
 
 - **Email**: info@infodra.ai
-- **Website**: [infodratech.com](https://infodratech.com)
+- **Website**: [infodra.in](https://infodra.in)
 - **LinkedIn**: [linkedin.com/company/infodra](https://linkedin.com/company/infodra)
 
-## 📄 License
+## License
 
 © 2026 Infodra Technologies Private Limited. All rights reserved.
 
 ---
 
 Built with ❤️ by Infodra Technologies
+

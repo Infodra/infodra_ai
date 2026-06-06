@@ -143,7 +143,7 @@ export const products: Product[] = [
     ],
     primaryCTA: {
       text: "Get Started",
-      url: "https://wa.me/918148146785?text=Hi%20Infodra%20Team%2C%20I%20need%20demo%20for%20AI%20Video%20Translator.%20Please%20share%20details.",
+      url: "https://wa.me/919363753540?text=Hi%20Infodra%20Team%2C%20I%20need%20demo%20for%20AI%20Video%20Translator.%20Please%20share%20details.",
     },
     secondaryCTA: {
       text: "Schedule Demo",
@@ -241,7 +241,7 @@ export const products: Product[] = [
     ],
     primaryCTA: {
       text: "Get started",
-      url: "https://wa.me/918148146785?text=Hi%20Infodra%20Team%2C%20I%20need%20demo%20for%20AI%20User%20Manual%20Generation.%20Please%20share%20details.",
+      url: "https://wa.me/919363753540?text=Hi%20Infodra%20Team%2C%20I%20need%20demo%20for%20AI%20User%20Manual%20Generation.%20Please%20share%20details.",
     },
     secondaryCTA: {
       text: "View Demo",
@@ -339,7 +339,7 @@ export const products: Product[] = [
     ],
     primaryCTA: {
       text: "Translate Now",
-      url: "https://wa.me/918148146785?text=Hi%20Infodra%20Team%2C%20I%20need%20demo%20for%20AI%20Document%20Translator.%20Please%20share%20details.",
+      url: "https://wa.me/919363753540?text=Hi%20Infodra%20Team%2C%20I%20need%20demo%20for%20AI%20Document%20Translator.%20Please%20share%20details.",
     },
     secondaryCTA: {
       text: "Request Quote",
@@ -442,7 +442,7 @@ export const products: Product[] = [
     },
     secondaryCTA: {
       text: "Contact Sales",
-      url: "https://wa.me/918148146785?text=Hi%20Infodra%20Team%2C%20I%20need%20information%20about%20BiZlead%20Database.%20Please%20share%20details.",
+      url: "https://wa.me/919363753540?text=Hi%20Infodra%20Team%2C%20I%20need%20information%20about%20BiZlead%20Database.%20Please%20share%20details.",
     },
   },
   {
@@ -564,7 +564,7 @@ export const products: Product[] = [
     },
     secondaryCTA: {
       text: "WhatsApp",
-      url: "https://wa.me/918148146785",
+      url: "https://wa.me/919363753540",
     },
   },
   {
@@ -667,7 +667,7 @@ export const products: Product[] = [
     },
     secondaryCTA: {
       text: "WhatsApp",
-      url: "https://wa.me/918148146785",
+      url: "https://wa.me/919363753540",
     },
   },
   {

@@ -19,22 +19,22 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const capabilities = [
     {
-      icon: '🤖',
+      icon: 'AI',
       title: 'AI Platforms & Automation',
       description: 'Building intelligent platforms for video translation, document processing, voice generation, and predictive analytics.',
     },
     {
-      icon: '💻',
+      icon: 'SaaS',
       title: 'SaaS Product Development',
       description: 'Developing scalable cloud-native SaaS products like BiZlead and StaffTrack for business operations.',
     },
     {
-      icon: '👥',
+      icon: 'Talent',
       title: 'AI-ML Engineering Talent',
       description: 'Deploying skilled AI engineers, data scientists, and software developers to enterprise teams worldwide.',
     },
     {
-      icon: '⚡',
+      icon: 'Custom',
       title: 'Custom AI Solutions',
       description: 'Designing and delivering tailored AI applications for specific business challenges and industry requirements.',
     },
@@ -74,10 +74,10 @@ export default function AboutPage() {
             About Infodra AI
           </h1>
           <p className="mt-6 text-lg md:text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed">
-            Infodra AI is the AI and digital product division of Infodra Technologies — a new-age technology startup led by industry veterans with over 20 years of experience, building intelligent SaaS products, AI-powered automation platforms, and deploying engineering talent for modern enterprises.
+            Infodra AI is the AI and digital product division of Infodra Technologies - a new-age technology startup led by industry veterans with over 20 years of experience, building intelligent SaaS products, AI-powered automation platforms, and deploying engineering talent for modern enterprises.
           </p>
           <p className="mt-8 text-sm text-primary-200/80">
-            AI Platforms • SaaS Products • Engineering Talent • Custom Solutions
+            AI Platforms | SaaS Products | Engineering Talent | Custom Solutions
           </p>
         </div>
       </section>
@@ -95,20 +95,20 @@ export default function AboutPage() {
             <p>
               <strong className="text-gray-900 dark:text-white">Infodra AI</strong> operates as the AI and digital product arm of{' '}
               <a
-                href="https://www.infodratech.com/about"
+                href="https://www.infodra.in/about"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 dark:text-primary-400 hover:underline font-medium"
               >
                 Infodra Technologies Pvt Ltd
               </a>
-              . Founded by industry veterans whose leadership brings over 20 years of hands-on experience across automotive engineering, software development, AI, and technical recruitment — we combine startup agility with deep domain expertise.
+              . Founded by industry veterans whose leadership brings over 20 years of hands-on experience across automotive engineering, software development, AI, and technical recruitment - we combine startup agility with deep domain expertise.
             </p>
             <p>
               We design, build, and deliver AI-powered platforms that help businesses automate workflows, break language barriers, generate leads, manage workforces, and make data-driven decisions. Our product portfolio includes AI Video Translator, AI Document Translator, AI Voice Generation Studio, BiZlead Database, StaffTrack, and AI Prediction/ML platforms.
             </p>
             <p>
-              Beyond products, we provide engineering talent deployment — connecting organizations with skilled AI engineers, full-stack developers, data scientists, and DevOps specialists to accelerate their technology initiatives.
+              Beyond products, we provide engineering talent deployment - connecting organizations with skilled AI engineers, full-stack developers, data scientists, and DevOps specialists to accelerate their technology initiatives.
             </p>
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function AboutPage() {
             <div className="bg-gradient-to-br from-primary-50 to-accent-50 dark:from-primary-950 dark:to-accent-950 rounded-2xl p-10 border border-primary-100 dark:border-primary-800">
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Mission</h3>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                To empower businesses with intelligent AI platforms and skilled engineering talent that drive measurable outcomes — making advanced technology accessible, practical, and impactful.
+                To empower businesses with intelligent AI platforms and skilled engineering talent that drive measurable outcomes - making advanced technology accessible, practical, and impactful.
               </p>
             </div>
             <div className="bg-gradient-to-br from-accent-50 to-primary-50 dark:from-accent-950 dark:to-primary-950 rounded-2xl p-10 border border-accent-100 dark:border-accent-800">
@@ -199,12 +199,12 @@ export default function AboutPage() {
             Infodra AI is a division of <strong className="text-gray-900 dark:text-white">Infodra Technologies Pvt Ltd</strong>. Learn more about our parent company, leadership, and full range of engineering and technology services.
           </p>
           <a
-            href="https://www.infodratech.com/about"
+            href="https://www.infodra.in/about"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-4 bg-gradient-ai text-white rounded-xl font-semibold text-lg hover:opacity-90 transition-all hover:scale-105 shadow-xl shadow-primary-500/20"
           >
-            Learn More About Us →
+            Learn More About Us ->
           </a>
         </div>
       </section>
@@ -216,7 +216,7 @@ export default function AboutPage() {
             Ready to Work With Us?
           </h2>
           <p className="text-lg md:text-xl text-primary-50 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Whether you need AI platforms, SaaS products, or engineering talent — we are ready to help.
+            Whether you need AI platforms, SaaS products, or engineering talent - we are ready to help.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -227,7 +227,7 @@ export default function AboutPage() {
               Contact Us
             </Link>
             <a
-              href="https://wa.me/918148146785"
+              href="https://wa.me/919363753540"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-white text-white px-8 py-3.5 rounded-lg font-semibold text-lg hover:bg-primary-400 hover:border-white active:bg-primary-600 transition-all duration-200 inline-block"
@@ -241,3 +241,4 @@ export default function AboutPage() {
     </main>
   )
 }
+

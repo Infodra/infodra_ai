@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef } from "react";
 import { Metadata } from "next";
@@ -102,7 +102,7 @@ export default function ContactPage() {
         "Unable to send message right now. Would you like to send it via email instead?"
       );
       if (useEmail) {
-        window.location.href = `mailto:connect@infodratech.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+        window.location.href = `mailto:info@infodra.in?subject=${mailtoSubject}&body=${mailtoBody}`;
       }
     } finally {
       setIsLoading(false);
@@ -147,7 +147,7 @@ export default function ContactPage() {
 
             {/* Trust Indicator */}
             <p className="text-sm text-gray-500 dark:text-gray-400 font-normal">
-              Phone: +91 93637 53540 • Email: connect@infodratech.com
+              Phone: +91 93637 53540 | Email: info@infodra.in
             </p>
           </div>
         </div>
@@ -178,15 +178,15 @@ export default function ContactPage() {
                     Address
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    INNOV8, 2ND FLOOR
+                    Innov8, 2nd floor
                     <br />
-                    RMZ MILLENIA BUSINESS PARK
+                    RMZ Millenia Business Park
                     <br />
-                    CAMPUS 1A
+                    Campus 1A
                     <br />
-                    NO.143, DR.M.G.R.ROAD
+                    No.143, Dr.M.G.R.Road
                     <br />
-                    PERUNGUDI, CHENNAI-600096
+                    Perungudi, Chennai-600096
                   </p>
                 </div>
 
@@ -209,10 +209,10 @@ export default function ContactPage() {
                     Email
                   </h3>
                   <a
-                    href="mailto:connect@infodratech.com"
+                    href="mailto:info@infodra.in"
                     className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 break-all"
                   >
-                    connect@infodratech.com
+                    info@infodra.in
                   </a>
                 </div>
 
@@ -476,7 +476,7 @@ export default function ContactPage() {
                     />
                   </svg>
                   <div>
-                    <h3 className="font-semibold text-lg">🎉 Message Received Successfully!</h3>
+                    <h3 className="font-semibold text-lg">Message Received Successfully!</h3>
                     <p className="text-sm mt-1">
                       Thank you, <strong>{formData.name}</strong>! We've received your message.
                     </p>
@@ -572,3 +572,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

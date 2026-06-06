@@ -13,7 +13,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-3">
-              <a href="https://www.infodratech.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.infodra.in" target="_blank" rel="noopener noreferrer">
                 <Image 
                   src="/CompanyNameLogo.png" 
                   alt="Infodra AI Logo" 
@@ -62,7 +62,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://infodratech.com/resourcing"
+                  href="https://infodra.in/resourcing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary-400 transition-colors"
@@ -72,7 +72,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://infodratech.com/digital-solutions"
+                  href="https://www.infodra.in/technology"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary-400 transition-colors"
@@ -103,21 +103,21 @@ export function Footer() {
                 Terms of Service
               </Link>
               <a
-                href="mailto:connect@infodratech.com"
+                href="mailto:info@infodra.in"
                 className="hover:text-primary-400 transition-colors"
               >
-                connect@infodratech.com
+                info@infodra.in
               </a>
             </div>
           </div>
           <div className="mt-4 text-center text-gray-500 text-sm">
             <a
-              href="https://infodratech.com"
+              href="https://infodra.in"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary-400 transition-colors"
             >
-              infodratech.com
+              infodra.in
             </a>
           </div>
         </div>
@@ -125,3 +125,4 @@ export function Footer() {
     </footer>
   )
 }
+

@@ -53,8 +53,9 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('MongoDB Error:', error);
     return NextResponse.json(
-      { error: 'Failed to submit contact form. Please email us at connect@infodratech.com' },
+      { error: 'Failed to submit contact form. Please email us at info@infodra.in' },
       { status: 500 }
     );
   }
 }
+

@@ -15,7 +15,7 @@ export function WhatsAppCTA({
   fullWidth = false,
   className = "",
 }: WhatsAppCTAProps) {
-  const phoneNumber = "918148146785";
+  const phoneNumber = "919363753540";
   const message = `Hi Infodra Team, I need demo for ${productName}. Please share details.`;
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
