@@ -204,7 +204,7 @@ export default function AboutPage() {
             rel="noopener noreferrer"
             className="inline-block px-10 py-4 bg-gradient-ai text-white rounded-xl font-semibold text-lg hover:opacity-90 transition-all hover:scale-105 shadow-xl shadow-primary-500/20"
           >
-            Learn More About Us ->
+            Learn More About Us -&gt;
           </a>
         </div>
       </section>
